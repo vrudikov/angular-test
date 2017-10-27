@@ -5,6 +5,8 @@ import {PageNotFoundComponent} from './components/page-not-found/page-not-found.
 import {BlankPageComponent} from './components/layout/blank-page/blank-page.component';
 import {BlankTestComponent} from './components/blank-test/blank-test.component';
 import {IndexComponent} from './components/index/index.component';
+import {NgxbSelectTestComponent} from './components/ngxb-test/ngxb-select-test/ngxb-select-test.component';
+import {NgxbSelect2TestComponent} from './components/ngxb-test/ngxb-select2-test/ngxb-select2-test.component';
 
 export const appRoutes: Routes = [
   // Main
@@ -13,6 +15,12 @@ export const appRoutes: Routes = [
   },
   {
     path: 'index', component: IndexComponent
+  },
+  {
+    path: 'ngxb-select-test', component: NgxbSelectTestComponent
+  },
+  {
+    path: 'ngxb-select2-test', component: NgxbSelect2TestComponent
   },
   {
     path: 'blank', component: BlankPageComponent,

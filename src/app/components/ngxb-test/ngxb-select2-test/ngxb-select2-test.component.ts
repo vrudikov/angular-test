@@ -4,11 +4,11 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 
 @Component({
-  selector: 'app-ngxb-select-test',
-  templateUrl: './ngxb-select-test.component.html',
-  styleUrls: ['./ngxb-select-test.component.css']
+  selector: 'app-ngxb-select2-test',
+  templateUrl: 'ngxb-select2-test.component.html',
+  styleUrls: ['ngxb-select2-test.component.css']
 })
-export class NgxbSelectTestComponent implements OnInit {
+export class NgxbSelect2TestComponent implements OnInit {
 
   testModels: Array<TestModel> = [
     new TestModel(1, 'A1', 'ABCD', 'PTest12'),
@@ -29,10 +29,10 @@ export class NgxbSelectTestComponent implements OnInit {
         // Runs on every search
         observer.next(this.testForm.get('testId').value);
       })
-      .mergeMap((token: string) => this.getStatesAsObservable(token));
+      .mergeMap((token: string) => this.getDataAsObservable(token));
   }
 
-  public getStatesAsObservable(token: string): Observable<any> {
+  public getDataAsObservable(token: string): Observable<any> {
     const query = new RegExp(token, 'i');
 
     return Observable.of(

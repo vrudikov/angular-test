@@ -1,5 +1,5 @@
 <p>
-  ngxb-select-test works!
+  ngxb-select2-test works!
 </p>
 
 <template #customItemTemplate let-model="item" let-index="index">
@@ -11,7 +11,7 @@
   <app-form-group [control]="testForm.get('testId')" [fieldTitle]="'Test Field'">
 
     <div class="input-group">
-      <input formControlName="testId"
+      <input formControlName="testId" appTypeahead2
              [typeahead]="dataSource"
              typeaheadOptionsLimit="7"
              typeaheadMinLength="0"
